@@ -15,12 +15,12 @@ if __name__ == '__main__':
 				client_secret=credentials[1],
 				user_agent='python:LetsGetThisBread:v1.0.0 (by /u/seanarwa)')
 	except:
-		print 'Missing or Invalid Credentials'
+		print('Missing or Invalid Credentials')
 		sys.exit()
 
 	client_id = credentials[0]
 	client_secret = credentials[1]
 
 	for subreddit in subreddits:
-		print 'Downloading r/' + subreddit + ' ...'
+		print('Downloading r/' + subreddit + ' ...')
 		os.system('download.py ' + client_id + ' ' + client_secret +  ' ' + subreddit + ' 50')
